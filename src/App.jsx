@@ -1,9 +1,23 @@
+const Hello = (props) => {
+  console.log(props);
+  return (
+    <div>
+      <p>
+        Hello {props.name}, you are {props.age} years old.
+      </p>
+    </div>
+  );
+};
+
 const App = () => {
-  console.log("Hello from komponentti App.");
+  const nimi = "Pekka";
+  const ika = 10;
   return (
     <>
       <section>
-        <p>App-komponentissa on sisältö: Hello World!</p>
+        <h1> Greetings</h1>
+        <Hello name="Maya" age={26 + 10} />
+        <Hello name={nimi} age={ika} />
       </section>
     </>
   );
