@@ -8,7 +8,10 @@ const Footer = () => {
 };
 
 const Hello = (props) => {
-  console.log(props);
+  const bornYear = () => {
+    const yearNow = new Date().getFullYear();
+    return yearNow - props.age;
+  };
   return (
     <>
       <p>
